@@ -1,0 +1,3 @@
+See https://github.com/gravwell/tools/tree/master/sentiment/trainer for the application that generated the training set
+
+Dataset used is avialable at https://github.com/cdipaolo/sentiment/tree/master/datasets/train

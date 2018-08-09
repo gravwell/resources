@@ -1,0 +1,19 @@
+#Resources
+A collection of pre-generated resource files for Gravwell.  The resource files enable things like sentiment analysis, anomoly detection, bro log file translation and more.
+
+To get started with Gravwell visit https://www.gravwell.io/community-edition
+
+## Contents
+Resources are grouped according to functionality group and or usage.  Some of them are pretty large.
+
+### Bro 
+Resource files for searching bro log files and performing analysis
+
+#### namedfields
+Resource that translates ASCII log tab delimited formats to named fields for easier searching
+
+### MachineLearning
+Pretrained data sets for Gravwell's various machine learning systems.  The pre-trained sets may or may not contain the source training data, so check the respective READMEs.
+
+#### Sentiment
+A training data set that can perform sentiment analysis based on the IMDB review dataset.

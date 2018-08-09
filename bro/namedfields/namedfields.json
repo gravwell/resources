@@ -1,0 +1,2621 @@
+{
+	"Version": 1,
+	"Set": [
+		{
+			"Delim": "\t",
+			"Name": "PE",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "id",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "machine",
+					"DataType": "string",
+					"Index": 2
+				},
+				{
+					"Name": "compile_ts",
+					"DataType": "time",
+					"Index": 3
+				},
+				{
+					"Name": "os",
+					"DataType": "string",
+					"Index": 4
+				},
+				{
+					"Name": "subsystem",
+					"DataType": "string",
+					"Index": 5
+				},
+				{
+					"Name": "is_exe",
+					"DataType": "bool",
+					"Index": 6
+				},
+				{
+					"Name": "is_64bit",
+					"DataType": "bool",
+					"Index": 7
+				},
+				{
+					"Name": "uses_aslr",
+					"DataType": "bool",
+					"Index": 8
+				},
+				{
+					"Name": "uses_dep",
+					"DataType": "bool",
+					"Index": 9
+				},
+				{
+					"Name": "uses_code_integrity",
+					"DataType": "bool",
+					"Index": 10
+				},
+				{
+					"Name": "uses_seh",
+					"DataType": "bool",
+					"Index": 11
+				},
+				{
+					"Name": "has_import_table",
+					"DataType": "bool",
+					"Index": 12
+				},
+				{
+					"Name": "has_export_table",
+					"DataType": "bool",
+					"Index": 13
+				},
+				{
+					"Name": "has_cert_table",
+					"DataType": "bool",
+					"Index": 14
+				},
+				{
+					"Name": "has_debug_data",
+					"DataType": "bool",
+					"Index": 15
+				},
+				{
+					"Name": "section_names",
+					"DataType": "vector",
+					"Index": 16
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "X509",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "id",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "certificate",
+					"DataType": "X509::Certificate",
+					"Index": 2
+				},
+				{
+					"Name": "handle",
+					"DataType": "opaque",
+					"Index": 3
+				},
+				{
+					"Name": "extensions",
+					"DataType": "vector",
+					"Index": 4
+				},
+				{
+					"Name": "san",
+					"DataType": "X509::SubjectAlternativeName",
+					"Index": 5
+				},
+				{
+					"Name": "basic_constraints",
+					"DataType": "X509::BasicConstraints",
+					"Index": 6
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "Communication",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "peer",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src_name",
+					"DataType": "string",
+					"Index": 2
+				},
+				{
+					"Name": "connected_peer_desc",
+					"DataType": "string",
+					"Index": 3
+				},
+				{
+					"Name": "connected_peer_addr",
+					"DataType": "addr",
+					"Index": 4
+				},
+				{
+					"Name": "connected_peer_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "level",
+					"DataType": "string",
+					"Index": 6
+				},
+				{
+					"Name": "message",
+					"DataType": "string",
+					"Index": 7
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "DPD",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "proto",
+					"DataType": "transport_proto",
+					"Index": 6
+				},
+				{
+					"Name": "analyzer",
+					"DataType": "string",
+					"Index": 7
+				},
+				{
+					"Name": "failure_reason",
+					"DataType": "string",
+					"Index": 8
+				},
+				{
+					"Name": "disabled_aids",
+					"DataType": "set[count];",
+					"Index": 9
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "Intel",
+			"Subs": [
+				{
+					"Name": "source",
+					"DataType": "string;",
+					"Index": 0
+				},
+				{
+					"Name": "desc",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "url",
+					"DataType": "string",
+					"Index": 2
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "NetControl",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "rule_id",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "category",
+					"DataType": "InfoCategory",
+					"Index": 2
+				},
+				{
+					"Name": "cmd",
+					"DataType": "string",
+					"Index": 3
+				},
+				{
+					"Name": "state",
+					"DataType": "InfoState",
+					"Index": 4
+				},
+				{
+					"Name": "action",
+					"DataType": "string",
+					"Index": 5
+				},
+				{
+					"Name": "target",
+					"DataType": "TargetType",
+					"Index": 6
+				},
+				{
+					"Name": "entity_type",
+					"DataType": "string",
+					"Index": 7
+				},
+				{
+					"Name": "entity",
+					"DataType": "string",
+					"Index": 8
+				},
+				{
+					"Name": "mod",
+					"DataType": "string",
+					"Index": 9
+				},
+				{
+					"Name": "msg",
+					"DataType": "string",
+					"Index": 10
+				},
+				{
+					"Name": "priority",
+					"DataType": "int",
+					"Index": 11
+				},
+				{
+					"Name": "expire",
+					"DataType": "interval",
+					"Index": 12
+				},
+				{
+					"Name": "location",
+					"DataType": "string",
+					"Index": 13
+				},
+				{
+					"Name": "plugin",
+					"DataType": "string",
+					"Index": 14
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "Notice",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "conn",
+					"DataType": "connection",
+					"Index": 6
+				},
+				{
+					"Name": "iconn",
+					"DataType": "icmp_conn",
+					"Index": 7
+				},
+				{
+					"Name": "f",
+					"DataType": "fa_file",
+					"Index": 8
+				},
+				{
+					"Name": "fuid",
+					"DataType": "string",
+					"Index": 9
+				},
+				{
+					"Name": "file_mime_type",
+					"DataType": "string",
+					"Index": 10
+				},
+				{
+					"Name": "file_desc",
+					"DataType": "string",
+					"Index": 11
+				},
+				{
+					"Name": "proto",
+					"DataType": "transport_proto",
+					"Index": 12
+				},
+				{
+					"Name": "note",
+					"DataType": "Type",
+					"Index": 13
+				},
+				{
+					"Name": "msg",
+					"DataType": "string",
+					"Index": 14
+				},
+				{
+					"Name": "sub",
+					"DataType": "string",
+					"Index": 15
+				},
+				{
+					"Name": "src",
+					"DataType": "addr",
+					"Index": 16
+				},
+				{
+					"Name": "dst",
+					"DataType": "addr",
+					"Index": 17
+				},
+				{
+					"Name": "p",
+					"DataType": "port",
+					"Index": 18
+				},
+				{
+					"Name": "n",
+					"DataType": "count",
+					"Index": 19
+				},
+				{
+					"Name": "src_peer",
+					"DataType": "event_peer",
+					"Index": 20
+				},
+				{
+					"Name": "peer_descr",
+					"DataType": "string",
+					"Index": 21
+				},
+				{
+					"Name": "actions",
+					"DataType": "ActionSet",
+					"Index": 22
+				},
+				{
+					"Name": "email_body_sections",
+					"DataType": "vector",
+					"Index": 23
+				},
+				{
+					"Name": "email_delay_tokens",
+					"DataType": "set[string]",
+					"Index": 24
+				},
+				{
+					"Name": "identifier",
+					"DataType": "string",
+					"Index": 25
+				},
+				{
+					"Name": "suppress_for",
+					"DataType": "interval",
+					"Index": 26
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "PacketFilter",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "node",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "filter",
+					"DataType": "string",
+					"Index": 2
+				},
+				{
+					"Name": "init",
+					"DataType": "bool",
+					"Index": 3
+				},
+				{
+					"Name": "success",
+					"DataType": "bool",
+					"Index": 4
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "Signatures",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src_addr",
+					"DataType": "addr",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst_addr",
+					"DataType": "addr",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "note",
+					"DataType": "Notice::Type",
+					"Index": 6
+				},
+				{
+					"Name": "sig_id",
+					"DataType": "string",
+					"Index": 7
+				},
+				{
+					"Name": "event_msg",
+					"DataType": "string",
+					"Index": 8
+				},
+				{
+					"Name": "sub_msg",
+					"DataType": "string",
+					"Index": 9
+				},
+				{
+					"Name": "sig_count",
+					"DataType": "count",
+					"Index": 10
+				},
+				{
+					"Name": "host_count",
+					"DataType": "count",
+					"Index": 11
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "Software",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "host",
+					"DataType": "addr",
+					"Index": 1
+				},
+				{
+					"Name": "host_p",
+					"DataType": "port",
+					"Index": 2
+				},
+				{
+					"Name": "software_type",
+					"DataType": "Type",
+					"Index": 3
+				},
+				{
+					"Name": "name",
+					"DataType": "string",
+					"Index": 4
+				},
+				{
+					"Name": "version",
+					"DataType": "Version",
+					"Index": 5
+				},
+				{
+					"Name": "unparsed_version",
+					"DataType": "string",
+					"Index": 6
+				},
+				{
+					"Name": "force_log",
+					"DataType": "bool",
+					"Index": 7
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "Tunnel",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "tunnel_type",
+					"DataType": "Tunnel::Type",
+					"Index": 6
+				},
+				{
+					"Name": "action",
+					"DataType": "Action",
+					"Index": 7
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "Conn",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "proto",
+					"DataType": "transport_proto",
+					"Index": 6
+				},
+				{
+					"Name": "service",
+					"DataType": "string",
+					"Index": 7
+				},
+				{
+					"Name": "duration",
+					"DataType": "interval",
+					"Index": 8
+				},
+				{
+					"Name": "orig_bytes",
+					"DataType": "count",
+					"Index": 9
+				},
+				{
+					"Name": "resp_bytes",
+					"DataType": "count",
+					"Index": 10
+				},
+				{
+					"Name": "conn_state",
+					"DataType": "string",
+					"Index": 11
+				},
+				{
+					"Name": "local_orig",
+					"DataType": "bool",
+					"Index": 12
+				},
+				{
+					"Name": "local_resp",
+					"DataType": "bool",
+					"Index": 13
+				},
+				{
+					"Name": "missed_bytes",
+					"DataType": "count",
+					"Index": 14
+				},
+				{
+					"Name": "history",
+					"DataType": "string",
+					"Index": 15
+				},
+				{
+					"Name": "orig_pkts",
+					"DataType": "count",
+					"Index": 16
+				},
+				{
+					"Name": "orig_ip_bytes",
+					"DataType": "count",
+					"Index": 17
+				},
+				{
+					"Name": "resp_pkts",
+					"DataType": "count",
+					"Index": 18
+				},
+				{
+					"Name": "resp_ip_bytes",
+					"DataType": "count",
+					"Index": 19
+				},
+				{
+					"Name": "tunnel_parents",
+					"DataType": "set[string]",
+					"Index": 20
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "DCE_RPC",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": ":",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": ":",
+					"Index": 1
+				},
+				{
+					"Name": "id",
+					"DataType": ":",
+					"Index": 2
+				},
+				{
+					"Name": "rtt",
+					"DataType": ":",
+					"Index": 3
+				},
+				{
+					"Name": "named_pipe",
+					"DataType": ":",
+					"Index": 4
+				},
+				{
+					"Name": "endpoint",
+					"DataType": ":",
+					"Index": 5
+				},
+				{
+					"Name": "operation",
+					"DataType": ":",
+					"Index": 6
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "DHCP",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "mac",
+					"DataType": "string",
+					"Index": 6
+				},
+				{
+					"Name": "assigned_ip",
+					"DataType": "addr",
+					"Index": 7
+				},
+				{
+					"Name": "lease_time",
+					"DataType": "interval",
+					"Index": 8
+				},
+				{
+					"Name": "trans_id",
+					"DataType": "count",
+					"Index": 9
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "DNP3",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "fc_request",
+					"DataType": "string",
+					"Index": 6
+				},
+				{
+					"Name": "fc_reply",
+					"DataType": "string",
+					"Index": 7
+				},
+				{
+					"Name": "iin",
+					"DataType": "count",
+					"Index": 8
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "DNS",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "proto",
+					"DataType": "transport_proto",
+					"Index": 6
+				},
+				{
+					"Name": "trans_id",
+					"DataType": "count",
+					"Index": 7
+				},
+				{
+					"Name": "rtt",
+					"DataType": "interval",
+					"Index": 8
+				},
+				{
+					"Name": "query",
+					"DataType": "string",
+					"Index": 9
+				},
+				{
+					"Name": "qclass",
+					"DataType": "count",
+					"Index": 10
+				},
+				{
+					"Name": "qclass_name",
+					"DataType": "string",
+					"Index": 11
+				},
+				{
+					"Name": "qtype",
+					"DataType": "count",
+					"Index": 12
+				},
+				{
+					"Name": "qtype_name",
+					"DataType": "string",
+					"Index": 13
+				},
+				{
+					"Name": "rcode",
+					"DataType": "count",
+					"Index": 14
+				},
+				{
+					"Name": "rcode_name",
+					"DataType": "string",
+					"Index": 15
+				},
+				{
+					"Name": "AA",
+					"DataType": "bool",
+					"Index": 16
+				},
+				{
+					"Name": "TC",
+					"DataType": "bool",
+					"Index": 17
+				},
+				{
+					"Name": "RD",
+					"DataType": "bool",
+					"Index": 18
+				},
+				{
+					"Name": "RA",
+					"DataType": "bool",
+					"Index": 19
+				},
+				{
+					"Name": "Z",
+					"DataType": "count",
+					"Index": 20
+				},
+				{
+					"Name": "answers",
+					"DataType": "vector",
+					"Index": 21
+				},
+				{
+					"Name": "TTLs",
+					"DataType": "vector",
+					"Index": 22
+				},
+				{
+					"Name": "rejected",
+					"DataType": "bool",
+					"Index": 23
+				},
+				{
+					"Name": "total_answers",
+					"DataType": "count",
+					"Index": 24
+				},
+				{
+					"Name": "total_replies",
+					"DataType": "count",
+					"Index": 25
+				},
+				{
+					"Name": "saw_query",
+					"DataType": "bool",
+					"Index": 26
+				},
+				{
+					"Name": "saw_reply",
+					"DataType": "bool",
+					"Index": 27
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "FTP",
+			"Subs": [
+				{
+					"Name": "x",
+					"DataType": "count;",
+					"Index": 0
+				},
+				{
+					"Name": "y",
+					"DataType": "count;",
+					"Index": 1
+				},
+				{
+					"Name": "z",
+					"DataType": "count;",
+					"Index": 2
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "HTTP",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "trans_depth",
+					"DataType": "count",
+					"Index": 6
+				},
+				{
+					"Name": "method",
+					"DataType": "string",
+					"Index": 7
+				},
+				{
+					"Name": "host",
+					"DataType": "string",
+					"Index": 8
+				},
+				{
+					"Name": "uri",
+					"DataType": "string",
+					"Index": 9
+				},
+				{
+					"Name": "referrer",
+					"DataType": "string",
+					"Index": 10
+				},
+				{
+					"Name": "version",
+					"DataType": "string",
+					"Index": 11
+				},
+				{
+					"Name": "user_agent",
+					"DataType": "string",
+					"Index": 12
+				},
+				{
+					"Name": "request_body_len",
+					"DataType": "count",
+					"Index": 13
+				},
+				{
+					"Name": "response_body_len",
+					"DataType": "count",
+					"Index": 14
+				},
+				{
+					"Name": "status_code",
+					"DataType": "count",
+					"Index": 15
+				},
+				{
+					"Name": "status_msg",
+					"DataType": "string",
+					"Index": 16
+				},
+				{
+					"Name": "info_code",
+					"DataType": "count",
+					"Index": 17
+				},
+				{
+					"Name": "info_msg",
+					"DataType": "string",
+					"Index": 18
+				},
+				{
+					"Name": "tags",
+					"DataType": "set[Tags]",
+					"Index": 19
+				},
+				{
+					"Name": "username",
+					"DataType": "string",
+					"Index": 20
+				},
+				{
+					"Name": "password",
+					"DataType": "string",
+					"Index": 21
+				},
+				{
+					"Name": "capture_password",
+					"DataType": "bool",
+					"Index": 22
+				},
+				{
+					"Name": "proxied",
+					"DataType": "set[string]",
+					"Index": 23
+				},
+				{
+					"Name": "range_request",
+					"DataType": "bool",
+					"Index": 24
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "IRC",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "nick",
+					"DataType": "string",
+					"Index": 6
+				},
+				{
+					"Name": "user",
+					"DataType": "string",
+					"Index": 7
+				},
+				{
+					"Name": "command",
+					"DataType": "string",
+					"Index": 8
+				},
+				{
+					"Name": "value",
+					"DataType": "string",
+					"Index": 9
+				},
+				{
+					"Name": "addl",
+					"DataType": "string",
+					"Index": 10
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "KRB",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "request_type",
+					"DataType": "string",
+					"Index": 6
+				},
+				{
+					"Name": "client",
+					"DataType": "string",
+					"Index": 7
+				},
+				{
+					"Name": "service",
+					"DataType": "string",
+					"Index": 8
+				},
+				{
+					"Name": "success",
+					"DataType": "bool",
+					"Index": 9
+				},
+				{
+					"Name": "error_code",
+					"DataType": "count",
+					"Index": 10
+				},
+				{
+					"Name": "error_msg",
+					"DataType": "string",
+					"Index": 11
+				},
+				{
+					"Name": "from",
+					"DataType": "time",
+					"Index": 12
+				},
+				{
+					"Name": "till",
+					"DataType": "time",
+					"Index": 13
+				},
+				{
+					"Name": "cipher",
+					"DataType": "string",
+					"Index": 14
+				},
+				{
+					"Name": "forwardable",
+					"DataType": "bool",
+					"Index": 15
+				},
+				{
+					"Name": "renewable",
+					"DataType": "bool",
+					"Index": 16
+				},
+				{
+					"Name": "logged",
+					"DataType": "bool",
+					"Index": 17
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "Modbus",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "func",
+					"DataType": "string",
+					"Index": 6
+				},
+				{
+					"Name": "exception",
+					"DataType": "string",
+					"Index": 7
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "MySQL",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "cmd",
+					"DataType": "string",
+					"Index": 6
+				},
+				{
+					"Name": "arg",
+					"DataType": "string",
+					"Index": 7
+				},
+				{
+					"Name": "success",
+					"DataType": "bool",
+					"Index": 8
+				},
+				{
+					"Name": "rows",
+					"DataType": "count",
+					"Index": 9
+				},
+				{
+					"Name": "response",
+					"DataType": "string",
+					"Index": 10
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "NTLM",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": ":",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": ":",
+					"Index": 1
+				},
+				{
+					"Name": "id",
+					"DataType": ":",
+					"Index": 2
+				},
+				{
+					"Name": "username",
+					"DataType": ":",
+					"Index": 3
+				},
+				{
+					"Name": "hostname",
+					"DataType": ":",
+					"Index": 4
+				},
+				{
+					"Name": "domainname",
+					"DataType": ":",
+					"Index": 5
+				},
+				{
+					"Name": "success",
+					"DataType": ":",
+					"Index": 6
+				},
+				{
+					"Name": "status",
+					"DataType": ":",
+					"Index": 7
+				},
+				{
+					"Name": "done",
+					"DataType": "bool",
+					"Index": 8
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "RADIUS",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": ":",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": ":",
+					"Index": 1
+				},
+				{
+					"Name": "id",
+					"DataType": ":",
+					"Index": 2
+				},
+				{
+					"Name": "username",
+					"DataType": ":",
+					"Index": 3
+				},
+				{
+					"Name": "mac",
+					"DataType": ":",
+					"Index": 4
+				},
+				{
+					"Name": "framed_addr",
+					"DataType": ":",
+					"Index": 5
+				},
+				{
+					"Name": "remote_ip",
+					"DataType": ":",
+					"Index": 6
+				},
+				{
+					"Name": "connect_info",
+					"DataType": ":",
+					"Index": 7
+				},
+				{
+					"Name": "reply_msg",
+					"DataType": ":",
+					"Index": 8
+				},
+				{
+					"Name": "result",
+					"DataType": ":",
+					"Index": 9
+				},
+				{
+					"Name": "ttl",
+					"DataType": ":",
+					"Index": 10
+				},
+				{
+					"Name": "logged",
+					"DataType": ":",
+					"Index": 11
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "RDP",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "cookie",
+					"DataType": "string",
+					"Index": 6
+				},
+				{
+					"Name": "result",
+					"DataType": "string",
+					"Index": 7
+				},
+				{
+					"Name": "security_protocol",
+					"DataType": "string",
+					"Index": 8
+				},
+				{
+					"Name": "keyboard_layout",
+					"DataType": "string",
+					"Index": 9
+				},
+				{
+					"Name": "client_build",
+					"DataType": "string",
+					"Index": 10
+				},
+				{
+					"Name": "client_name",
+					"DataType": "string",
+					"Index": 11
+				},
+				{
+					"Name": "client_dig_product_id",
+					"DataType": "string",
+					"Index": 12
+				},
+				{
+					"Name": "desktop_width",
+					"DataType": "count",
+					"Index": 13
+				},
+				{
+					"Name": "desktop_height",
+					"DataType": "count",
+					"Index": 14
+				},
+				{
+					"Name": "requested_color_depth",
+					"DataType": "string",
+					"Index": 15
+				},
+				{
+					"Name": "cert_type",
+					"DataType": "string",
+					"Index": 16
+				},
+				{
+					"Name": "cert_count",
+					"DataType": "count",
+					"Index": 17
+				},
+				{
+					"Name": "cert_permanent",
+					"DataType": "bool",
+					"Index": 18
+				},
+				{
+					"Name": "encryption_level",
+					"DataType": "string",
+					"Index": 19
+				},
+				{
+					"Name": "encryption_method",
+					"DataType": "string",
+					"Index": 20
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "RFB",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "client_major_version",
+					"DataType": "string",
+					"Index": 6
+				},
+				{
+					"Name": "client_minor_version",
+					"DataType": "string",
+					"Index": 7
+				},
+				{
+					"Name": "server_major_version",
+					"DataType": "string",
+					"Index": 8
+				},
+				{
+					"Name": "server_minor_version",
+					"DataType": "string",
+					"Index": 9
+				},
+				{
+					"Name": "authentication_method",
+					"DataType": "string",
+					"Index": 10
+				},
+				{
+					"Name": "auth",
+					"DataType": "bool",
+					"Index": 11
+				},
+				{
+					"Name": "share_flag",
+					"DataType": "bool",
+					"Index": 12
+				},
+				{
+					"Name": "desktop_name",
+					"DataType": "string",
+					"Index": 13
+				},
+				{
+					"Name": "width",
+					"DataType": "count",
+					"Index": 14
+				},
+				{
+					"Name": "height",
+					"DataType": "count",
+					"Index": 15
+				},
+				{
+					"Name": "done",
+					"DataType": "bool",
+					"Index": 16
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "SIP",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "trans_depth",
+					"DataType": "count",
+					"Index": 6
+				},
+				{
+					"Name": "method",
+					"DataType": "string",
+					"Index": 7
+				},
+				{
+					"Name": "uri",
+					"DataType": "string",
+					"Index": 8
+				},
+				{
+					"Name": "date",
+					"DataType": "string",
+					"Index": 9
+				},
+				{
+					"Name": "request_from",
+					"DataType": "string",
+					"Index": 10
+				},
+				{
+					"Name": "request_to",
+					"DataType": "string",
+					"Index": 11
+				},
+				{
+					"Name": "response_from",
+					"DataType": "string",
+					"Index": 12
+				},
+				{
+					"Name": "response_to",
+					"DataType": "string",
+					"Index": 13
+				},
+				{
+					"Name": "reply_to",
+					"DataType": "string",
+					"Index": 14
+				},
+				{
+					"Name": "call_id",
+					"DataType": "string",
+					"Index": 15
+				},
+				{
+					"Name": "seq",
+					"DataType": "string",
+					"Index": 16
+				},
+				{
+					"Name": "subject",
+					"DataType": "string",
+					"Index": 17
+				},
+				{
+					"Name": "request_path",
+					"DataType": "vector",
+					"Index": 18
+				},
+				{
+					"Name": "response_path",
+					"DataType": "vector",
+					"Index": 19
+				},
+				{
+					"Name": "user_agent",
+					"DataType": "string",
+					"Index": 20
+				},
+				{
+					"Name": "status_code",
+					"DataType": "count",
+					"Index": 21
+				},
+				{
+					"Name": "status_msg",
+					"DataType": "string",
+					"Index": 22
+				},
+				{
+					"Name": "warning",
+					"DataType": "string",
+					"Index": 23
+				},
+				{
+					"Name": "request_body_len",
+					"DataType": "count",
+					"Index": 24
+				},
+				{
+					"Name": "response_body_len",
+					"DataType": "count",
+					"Index": 25
+				},
+				{
+					"Name": "content_type",
+					"DataType": "string",
+					"Index": 26
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "SMTP",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "trans_depth",
+					"DataType": "count",
+					"Index": 6
+				},
+				{
+					"Name": "helo",
+					"DataType": "string",
+					"Index": 7
+				},
+				{
+					"Name": "mailfrom",
+					"DataType": "string",
+					"Index": 8
+				},
+				{
+					"Name": "rcptto",
+					"DataType": "set[string]",
+					"Index": 9
+				},
+				{
+					"Name": "date",
+					"DataType": "string",
+					"Index": 10
+				},
+				{
+					"Name": "from",
+					"DataType": "string",
+					"Index": 11
+				},
+				{
+					"Name": "to",
+					"DataType": "set[string]",
+					"Index": 12
+				},
+				{
+					"Name": "cc",
+					"DataType": "set[string]",
+					"Index": 13
+				},
+				{
+					"Name": "reply_to",
+					"DataType": "string",
+					"Index": 14
+				},
+				{
+					"Name": "msg_id",
+					"DataType": "string",
+					"Index": 15
+				},
+				{
+					"Name": "in_reply_to",
+					"DataType": "string",
+					"Index": 16
+				},
+				{
+					"Name": "subject",
+					"DataType": "string",
+					"Index": 17
+				},
+				{
+					"Name": "x_originating_ip",
+					"DataType": "addr",
+					"Index": 18
+				},
+				{
+					"Name": "first_received",
+					"DataType": "string",
+					"Index": 19
+				},
+				{
+					"Name": "second_received",
+					"DataType": "string",
+					"Index": 20
+				},
+				{
+					"Name": "last_reply",
+					"DataType": "string",
+					"Index": 21
+				},
+				{
+					"Name": "path",
+					"DataType": "vector",
+					"Index": 22
+				},
+				{
+					"Name": "user_agent",
+					"DataType": "string",
+					"Index": 23
+				},
+				{
+					"Name": "tls",
+					"DataType": "bool",
+					"Index": 24
+				},
+				{
+					"Name": "process_received_from",
+					"DataType": "bool",
+					"Index": 25
+				},
+				{
+					"Name": "has_client_activity",
+					"DataType": "bool",
+					"Index": 26
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "SNMP",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "duration",
+					"DataType": "interval",
+					"Index": 6
+				},
+				{
+					"Name": "version",
+					"DataType": "string",
+					"Index": 7
+				},
+				{
+					"Name": "community",
+					"DataType": "string",
+					"Index": 8
+				},
+				{
+					"Name": "get_requests",
+					"DataType": "count",
+					"Index": 9
+				},
+				{
+					"Name": "get_bulk_requests",
+					"DataType": "count",
+					"Index": 10
+				},
+				{
+					"Name": "get_responses",
+					"DataType": "count",
+					"Index": 11
+				},
+				{
+					"Name": "set_requests",
+					"DataType": "count",
+					"Index": 12
+				},
+				{
+					"Name": "display_string",
+					"DataType": "string",
+					"Index": 13
+				},
+				{
+					"Name": "up_since",
+					"DataType": "time",
+					"Index": 14
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "SOCKS",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "version",
+					"DataType": "count",
+					"Index": 6
+				},
+				{
+					"Name": "user",
+					"DataType": "string",
+					"Index": 7
+				},
+				{
+					"Name": "password",
+					"DataType": "string",
+					"Index": 8
+				},
+				{
+					"Name": "status",
+					"DataType": "string",
+					"Index": 9
+				},
+				{
+					"Name": "request",
+					"DataType": "SOCKS::Address",
+					"Index": 10
+				},
+				{
+					"Name": "request_p",
+					"DataType": "port",
+					"Index": 11
+				},
+				{
+					"Name": "bound",
+					"DataType": "SOCKS::Address",
+					"Index": 12
+				},
+				{
+					"Name": "bound_p",
+					"DataType": "port",
+					"Index": 13
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "SSH",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "version",
+					"DataType": "count",
+					"Index": 6
+				},
+				{
+					"Name": "auth_success",
+					"DataType": "bool",
+					"Index": 7
+				},
+				{
+					"Name": "auth_attempts",
+					"DataType": "count",
+					"Index": 8
+				},
+				{
+					"Name": "direction",
+					"DataType": "Direction",
+					"Index": 9
+				},
+				{
+					"Name": "client",
+					"DataType": "string",
+					"Index": 10
+				},
+				{
+					"Name": "server",
+					"DataType": "string",
+					"Index": 11
+				},
+				{
+					"Name": "cipher_alg",
+					"DataType": "string",
+					"Index": 12
+				},
+				{
+					"Name": "mac_alg",
+					"DataType": "string",
+					"Index": 13
+				},
+				{
+					"Name": "compression_alg",
+					"DataType": "string",
+					"Index": 14
+				},
+				{
+					"Name": "kex_alg",
+					"DataType": "string",
+					"Index": 15
+				},
+				{
+					"Name": "host_key_alg",
+					"DataType": "string",
+					"Index": 16
+				},
+				{
+					"Name": "host_key",
+					"DataType": "string",
+					"Index": 17
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "SSL",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "version_num",
+					"DataType": "count",
+					"Index": 6
+				},
+				{
+					"Name": "version",
+					"DataType": "string",
+					"Index": 7
+				},
+				{
+					"Name": "cipher",
+					"DataType": "string",
+					"Index": 8
+				},
+				{
+					"Name": "curve",
+					"DataType": "string",
+					"Index": 9
+				},
+				{
+					"Name": "server_name",
+					"DataType": "string",
+					"Index": 10
+				},
+				{
+					"Name": "session_id",
+					"DataType": "string",
+					"Index": 11
+				},
+				{
+					"Name": "resumed",
+					"DataType": "bool",
+					"Index": 12
+				},
+				{
+					"Name": "client_ticket_empty_session_seen",
+					"DataType": "bool",
+					"Index": 13
+				},
+				{
+					"Name": "client_key_exchange_seen",
+					"DataType": "bool",
+					"Index": 14
+				},
+				{
+					"Name": "server_appdata",
+					"DataType": "count",
+					"Index": 15
+				},
+				{
+					"Name": "client_appdata",
+					"DataType": "bool",
+					"Index": 16
+				},
+				{
+					"Name": "last_alert",
+					"DataType": "string",
+					"Index": 17
+				},
+				{
+					"Name": "next_protocol",
+					"DataType": "string",
+					"Index": 18
+				},
+				{
+					"Name": "analyzer_id",
+					"DataType": "count",
+					"Index": 19
+				},
+				{
+					"Name": "established",
+					"DataType": "bool",
+					"Index": 20
+				},
+				{
+					"Name": "logged",
+					"DataType": "bool",
+					"Index": 21
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "Syslog",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": "string",
+					"Index": 1
+				},
+				{
+					"Name": "src",
+					"DataType": "ip",
+					"Index": 2
+				},
+				{
+					"Name": "src_port",
+					"DataType": "port",
+					"Index": 3
+				},
+				{
+					"Name": "dst",
+					"DataType": "ip",
+					"Index": 4
+				},
+				{
+					"Name": "dst_port",
+					"DataType": "port",
+					"Index": 5
+				},
+				{
+					"Name": "proto",
+					"DataType": "transport_proto",
+					"Index": 6
+				},
+				{
+					"Name": "facility",
+					"DataType": "string",
+					"Index": 7
+				},
+				{
+					"Name": "severity",
+					"DataType": "string",
+					"Index": 8
+				},
+				{
+					"Name": "message",
+					"DataType": "string",
+					"Index": 9
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "Barnyard2",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "pid",
+					"DataType": "PacketID",
+					"Index": 1
+				},
+				{
+					"Name": "alert",
+					"DataType": "AlertData",
+					"Index": 2
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "Traceroute",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": "time",
+					"Index": 0
+				},
+				{
+					"Name": "src",
+					"DataType": "addr",
+					"Index": 1
+				},
+				{
+					"Name": "dst",
+					"DataType": "addr",
+					"Index": 2
+				},
+				{
+					"Name": "proto",
+					"DataType": "string",
+					"Index": 3
+				}
+			]
+		},
+		{
+			"Delim": "\t",
+			"Name": "SMB",
+			"Subs": [
+				{
+					"Name": "ts",
+					"DataType": ":",
+					"Index": 0
+				},
+				{
+					"Name": "uid",
+					"DataType": ":",
+					"Index": 1
+				},
+				{
+					"Name": "id",
+					"DataType": ":",
+					"Index": 2
+				},
+				{
+					"Name": "fuid",
+					"DataType": ":",
+					"Index": 3
+				},
+				{
+					"Name": "action",
+					"DataType": ":",
+					"Index": 4
+				},
+				{
+					"Name": "path",
+					"DataType": ":",
+					"Index": 5
+				},
+				{
+					"Name": "name",
+					"DataType": ":",
+					"Index": 6
+				},
+				{
+					"Name": "size",
+					"DataType": ":",
+					"Index": 7
+				},
+				{
+					"Name": "prev_name",
+					"DataType": ":",
+					"Index": 8
+				},
+				{
+					"Name": "times",
+					"DataType": ":",
+					"Index": 9
+				}
+			]
+		}
+	]
+}
