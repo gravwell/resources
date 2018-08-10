@@ -1153,74 +1153,69 @@
 					"Index": 10
 				},
 				{
-					"Name": "version",
+					"Name": "user_agent",
 					"DataType": "string",
 					"Index": 11
 				},
 				{
-					"Name": "user_agent",
-					"DataType": "string",
-					"Index": 12
-				},
-				{
 					"Name": "request_body_len",
 					"DataType": "count",
-					"Index": 13
+					"Index": 12
 				},
 				{
 					"Name": "response_body_len",
 					"DataType": "count",
-					"Index": 14
+					"Index": 13
 				},
 				{
 					"Name": "status_code",
 					"DataType": "count",
-					"Index": 15
+					"Index": 14
 				},
 				{
 					"Name": "status_msg",
 					"DataType": "string",
-					"Index": 16
+					"Index": 15
 				},
 				{
 					"Name": "info_code",
 					"DataType": "count",
-					"Index": 17
+					"Index": 16
 				},
 				{
 					"Name": "info_msg",
 					"DataType": "string",
-					"Index": 18
+					"Index": 17
 				},
 				{
 					"Name": "tags",
 					"DataType": "set[Tags]",
-					"Index": 19
+					"Index": 18
 				},
 				{
 					"Name": "username",
 					"DataType": "string",
-					"Index": 20
+					"Index": 19
 				},
 				{
 					"Name": "password",
 					"DataType": "string",
-					"Index": 21
+					"Index": 20
 				},
 				{
 					"Name": "capture_password",
 					"DataType": "bool",
-					"Index": 22
+					"Index": 21
 				},
 				{
 					"Name": "proxied",
 					"DataType": "set[string]",
-					"Index": 23
+					"Index": 22
 				},
 				{
 					"Name": "range_request",
 					"DataType": "bool",
-					"Index": 24
+					"Index": 23
 				}
 			]
 		},
