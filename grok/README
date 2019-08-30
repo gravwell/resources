@@ -1,0 +1,8 @@
+This directory contains loadable grok pattern file that includes ALOT of grok patterns, these patterns are derived from
+the patterns included in https://github.com/traetox/grokky/patterns which is a slightly modified version of the patterns in 
+https://github.com/logrusorgru/grokky, which derives most of its patterns from https://github.com/vjeantet/grok.
+
+These patterns are designed to be extremely strict, which means an IPV6 pattern garuntees that you have a COMPLETELY valid IPv6 address.
+The strict pattern system means that the generated regular expressions can be extremely complex and extremely slow.
+
+For example, if you are looking for an apache hostname, apache may not entirely validate that the host name adheres to the spec and a hostname comprised of the beer emojii might actually be in the logs, but the IPORHOST grok pattern will reject it.  It may often be bettern to have more relaxed patterns (both for speed and flexability).  But this is a great starting point
